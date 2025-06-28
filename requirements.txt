@@ -1,0 +1,7 @@
+bcrypt==4.3.0
+Django==2.2.4
+mysqlclient==2.2.7
+PyMySQL==1.1.1
+pytz==2025.2
+setuptools==80.8.0
+sqlparse==0.5.3
