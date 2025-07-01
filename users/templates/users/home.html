@@ -1,0 +1,159 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MediTrack | Smart Healthcare Platform</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .navbar {
+      background-color: #ffffff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .hero {
+      background: linear-gradient(to right, #e7f3ff, #f4faff);
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .features, .about, .contact {
+      padding: 60px 20px;
+      background: white;
+    }
+    .feature-box {
+      text-align: center;
+      padding: 20px;
+    }
+    .feature-box i {
+      font-size: 40px;
+      color: #0d6efd;
+      margin-bottom: 15px;
+    }
+    footer {
+      background-color: #f1f3f5;
+      padding: 20px 0;
+      text-align: center;
+      color: #6c757d;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-light">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary" href="#">MediTrack</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <div class="navbar-nav">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#about">About Us</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <a class="nav-link" href="{% url 'login' %}">Login</a>
+        <a class="nav-link" href="{% url 'register' %}">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<section id="home" class="hero">
+  <div class="container mt-5">
+    <img src="{% static 'img/homepage.png' %}" alt="Medical Illustration" width="160" class="mb-4">
+    <h1>Empowering Smart Healthcare</h1>
+    <p>MediTrack helps healthcare professionals monitor and manage patient vitals securely and intelligently.</p>
+    <a href="{% url 'login' %}" class="btn btn-primary btn-lg mt-3">Get Started</a>
+  </div>
+</section>
+
+
+<section class="features">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 feature-box">
+        <i class="bi bi-heart-pulse-fill"></i>
+        <h5>Vital Monitoring</h5>
+        <p>Track patient vitals in real-time: blood pressure, oxygen, temperature, and more.</p>
+      </div>
+      <div class="col-md-4 feature-box">
+        <i class="bi bi-lock-fill"></i>
+        <h5>Secure Access</h5>
+        <p>Data encryption and authenticated access to ensure medical data privacy.</p>
+      </div>
+      <div class="col-md-4 feature-box">
+        <i class="bi bi-speedometer2"></i>
+        <h5>Smart Dashboard</h5>
+        <p>Get a clear overview of patient activity and history with easy navigation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="about" class="about bg-light py-5">
+  <div class="container">
+    <h2 class="text-center text-primary mb-4">About MediTrack</h2>
+
+    <p class="text-center px-3">
+      MediTrack is an intuitive and secure medical management system built specifically for healthcare professionals.
+      <br><br>
+      Designed to simplify daily operations, it helps doctors and clinics focus more on patient care and less on paperwork.
+      <br><br>
+      ✦ Organize patient data and vital signs with ease. <br>
+      ✦ Improve care quality with accurate, real-time records. <br>
+      ✦ Access smart insights through integrated analytics and dashboards.
+      <br><br>
+      Whether you're running a small clinic or a large healthcare facility, MediTrack adapts to your needs—securely, efficiently, and with a modern touch.
+    </p>
+
+    
+    <div class="text-center mt-4">
+      <a href="{% url 'register' %}" class="btn btn-primary btn-lg">
+        Try It Now
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="contact" class="contact">
+  <div class="container">
+    <h2 class="text-center text-primary mb-4">Contact Us</h2>
+    <p class="text-center mb-4">
+      Have questions, feedback, or want to collaborate? Reach out!
+    </p>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <ul class="list-group list-group-flush text-center">
+          <li class="list-group-item"><i class="bi bi-envelope-fill"></i> support@meditrack.site</li>
+          <li class="list-group-item"><i class="bi bi-phone-fill"></i> +970**********</li>
+          <li class="list-group-item"><i class="bi bi-geo-alt-fill"></i> Ramallah, Palestine</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="container">
+    &copy; {{ year|default:"2025" }} MediTrack. All rights reserved.
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
